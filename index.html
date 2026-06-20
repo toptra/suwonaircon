@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -785,7 +786,7 @@ function handleAdSubmit(e) {
   var company = form.querySelector('#ad-company').value;
   var message = form.querySelector('#ad-message').value;
   btn.disabled = true; btn.textContent = '전송 중...';
-  var SHEET_URL = '여기에_구글AppsScript_URL_입력';  // ← 구글 Apps Script URL 입력
+  var SHEET_URL = 'https://script.google.com/macros/s/AKfycbzZGoSZciLISA1huqRUIUJkpjsPW6waNs8sW6Wthc6U9jpNYt117Aym38jGiBdEYtiF/exec';
   var params = '?name='+encodeURIComponent(name)+'&phone='+encodeURIComponent(phone)+'&company='+encodeURIComponent(company)+'&message='+encodeURIComponent(message);
   fetch(SHEET_URL + params, { method:'GET', mode:'no-cors' }).then(function(){
     alert('입점 신청이 완료되었습니다!\n빠른 시일 내에 연락드리겠습니다.');
